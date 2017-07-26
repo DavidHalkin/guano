@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'pf_dindisplay_probold';
+    src: url('../fonts/pfdindisplaypro-bold-webfont.eot');
+    src: url('../fonts/pfdindisplaypro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pfdindisplaypro-bold-webfont.woff') format('woff'),
+         url('../fonts/pfdindisplaypro-bold-webfont.ttf') format('truetype'),
+         url('../fonts/pfdindisplaypro-bold-webfont.svg#pf_dindisplay_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pf_dindisplay_prolight';
+    src: url('../fonts/pfdindisplaypro-light-webfont.eot');
+    src: url('../fonts/pfdindisplaypro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pfdindisplaypro-light-webfont.woff') format('woff'),
+         url('../fonts/pfdindisplaypro-light-webfont.ttf') format('truetype'),
+         url('../fonts/pfdindisplaypro-light-webfont.svg#pf_dindisplay_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pf_dindisplay_proregular';
+    src: url('../fonts/pfdindisplaypro-reg-webfont.eot');
+    src: url('../fonts/pfdindisplaypro-reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pfdindisplaypro-reg-webfont.woff') format('woff'),
+         url('../fonts/pfdindisplaypro-reg-webfont.ttf') format('truetype'),
+         url('../fonts/pfdindisplaypro-reg-webfont.svg#pf_dindisplay_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+	margin: 0;
+	color: #868686;
+	min-width:320px;
+	font: 16px/18px 'pf_dindisplay_proregular';
+}
+
+/* General reset */
+form, fieldset {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+img {border-style: none;}
+input, select, textarea {
+	vertical-align: middle;
+	font: 100% arial, helvetica, sans-serif;
+}
+table { border-collapse: collapse; border-spacing: 0; }
+
+a {color:#034b8f; text-decoration: none;}
+a:hover {text-decoration: underline;}
+q{quotes:none;}
+q:before{content:'';}
+q:after{content:'';}
+/* General settings */
+
+article ,aside ,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,summary,time,video{
+ display: block; 
+}
+*{
+	 box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!*/
