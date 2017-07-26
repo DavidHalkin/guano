@@ -134,17 +134,56 @@ article, aside, audio, canvas, datalist, details, figcaption, figure, footer, he
   text-decoration: none;
 }
 
-#header {
+header {
   border-bottom: 4px solid #8d8d8d;
   position: relative;
   padding-top: 50px;
 }
 
-#header .center {
+@media screen and (min-width: 1001px) {
+  header.sticky {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    padding-top: 20px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  header.sticky .h-links, header.sticky .center-info h2 span, header.sticky .info-etc span {
+    display: none;
+  }
+  header.sticky .center-info h2 {
+    color: #6d7f28;
+  }
+  header.sticky .center-info h2, header.sticky .info-etc strong {
+    font-family: 'pf_dindisplay_proregular';
+  }
+  header.sticky .info-etc {
+    top: auto;
+    bottom: 18px;
+    color: #525251;
+  }
+  header.sticky .info-etc a, header.sticky .info-etc em {
+    color: #525251;
+  }
+  header.sticky .logo {
+    width: 198px;
+    height: 26px;
+  }
+  header.sticky .logo a {
+    background: url(../images/logo2.gif) no-repeat;
+  }
+}
+
+header .center {
   padding-bottom: 25px;
 }
 
-#header .info-etc {
+header .info-etc {
   position: absolute;
   top: 20px;
   right: 15px;
@@ -154,22 +193,22 @@ article, aside, audio, canvas, datalist, details, figcaption, figure, footer, he
   color: #868686;
 }
 
-#header .info-etc span {
+header .info-etc span {
   display: block;
   font-size: 20px;
   padding-bottom: 7px;
 }
 
-#header .info-etc a {
+header .info-etc a {
   color: #868686;
 }
 
-#header .info-etc strong {
+header .info-etc strong {
   font-size: 36px;
   font-weight: normal;
 }
 
-#header .info-etc strong em {
+header .info-etc strong em {
   font-style: normal;
   color: #000;
 }

@@ -40,11 +40,46 @@
 		}
 	}
 }
-#header{
+header{
 	border-bottom: 4px solid #8d8d8d;
 	position: relative;
 	padding-top: 50px;
-	// padding-bottom: 25px;
+		@media screen and (min-width: 1001px){
+			&.sticky{
+				background: #fff;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				z-index: 50;
+				padding-top: 20px;
+				transition: all 0.3s ease;
+				.h-links,.center-info h2 span, .info-etc span{
+					display: none;
+				}
+				.center-info h2{
+					color: #6d7f28;
+				}
+				.center-info h2,.info-etc strong {
+					font-family: 'pf_dindisplay_proregular';
+				}
+				.info-etc{
+					top: auto;
+					bottom: 18px;
+					color: #525251;
+					a,em{
+						color: #525251;
+					}
+				}
+				.logo{
+					width: 198px;
+					height: 26px;
+					a{
+						background: url(../images/logo2.gif) no-repeat;
+					}
+				}
+			}
+		}
 	.center{
 		padding-bottom: 25px;
 	}
