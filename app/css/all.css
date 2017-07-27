@@ -343,14 +343,7 @@ header .info-etc strong em {
   border-bottom: 4px solid #6f8029;
 }
 
-.drop > ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  position: relative;
-}
-
-.drop > ul .drop-sub {
+.drop .drop-sub {
   width: -webkit-calc(100% - 300px);
   width: calc(100% - 300px);
   position: absolute;
@@ -359,29 +352,35 @@ header .info-etc strong em {
   background: #fff;
   padding: 15px 30px;
   min-height: 100%;
-  display: none;
   border-bottom: 4px solid #6f8029;
 }
 
-.drop > ul .drop-sub h3 {
+.drop .drop-sub h3 {
   margin: 0;
   font-size: 25px;
   line-height: 1;
   padding-bottom: 10px;
 }
 
-.drop > ul .drop-sub h4 {
+.drop .drop-sub h4 {
   margin: 5px 0 0 0;
   font-weight: normal;
   font-size: 15px;
   line-height: 1;
 }
 
-.drop > ul .drop-sub img {
+.drop .drop-sub img {
   max-width: 100%;
   height: auto;
   display: block;
   border-bottom: 3px solid #6f8029;
+}
+
+.drop > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
 }
 
 .drop > ul > li {
@@ -566,16 +565,41 @@ header .info-etc strong em {
   }
   .nav-bar {
     margin-top: 0 !important;
+    position: static !important;
+    padding-bottom: 0 !important;
+  }
+  .nav-bar-mob {
+    position: absolute;
+    top: 33px;
+    right: 15px;
+  }
+  header .info-etc {
+    right: 88px;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   #header .info-etc strong {
     font-size: 21px;
   }
   .logo {
     height: 59px;
     width: 129px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    height: 68px;
+    width: 150px;
+  }
+  header .info-etc {
+    position: static;
+    text-align: center !important;
+    padding-top: 10px;
   }
 }
 
