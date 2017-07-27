@@ -87,8 +87,7 @@ gulp.task('sprite', function () {
 gulp.task('scripts', function() {
 	return gulp.src([ // Берем все необходимые библиотеки
 		'bower_components/jquery/dist/jquery.min.js', 
-		'bower_components/owl.carousel/dist/owl.carousel.min.js',
-		'bower_components/matchHeight/dist/jquery.matchHeight-min.js'
+		'bower_components/owl.carousel/dist/owl.carousel.min.js'
 		])
 		// .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
 		// .pipe(uglify()) // Сжимаем JS файл

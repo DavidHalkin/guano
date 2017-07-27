@@ -28,6 +28,7 @@
 			display: block;
 			text-transform: uppercase;
 			padding-bottom: 10px;
+			letter-spacing: 1px;
 		}
 	}
 	a{
@@ -207,62 +208,54 @@ header{
 	background: #ebebeb;
 	box-shadow: 0 9px 12px 0px rgba(#000,.6);
 	border-bottom: 4px solid #6f8029;
-	.drop-sub{
-			width: calc(100% - 300px);
-			position: absolute;
-			top: 0;
-			left: 300px;
-			background: #fff;
-			padding: 15px 30px;
-			min-height: 100%;
-			border-bottom: 4px solid #6f8029;
-			h3{
-				margin: 0;
-				font-size: 25px;
-				line-height: 1;
-				padding-bottom: 10px;
-			}
-			h4{
-				margin: 5px 0 0 0;
-				font-weight: normal;
-				font-size: 15px;
-				line-height: 1;
-			}
-			img{
-				max-width: 100%;
-				height: auto;
-				display: block;
-				border-bottom: 3px solid #6f8029;
-			}
-		}
-	> ul {
-		padding: 0;
+	padding: 15px 30px;
+	h3{
 		margin: 0;
-		list-style: none;
-		position: relative;
-		
-		> li{
-			padding:0;
-			width: 300px;
-			width: 100%;
-			&:hover a{
-				color: #fff;
-				background: #6d7f28;
-			}
-			> a{
-				font-size: 18px;
-				line-height: 19px;
-				display: block;
-				color: #868686;
-				padding: 10px;
-				&:hover{
-					text-decoration: none;
-					color: #fff;
-					background: #6d7f28;
-				}
-			}
-		}
+		font-size: 25px;
+		line-height: 1;
+		padding-bottom: 10px;
 	}
+	h4{
+		margin: 5px 0 0 0;
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 1;
+	}
+	img{
+		max-width: 100%;
+		width: 100%;
+		height: auto;
+		display: block;
+		border-bottom: 3px solid #6f8029;
+	}
+	// > ul {
+	// 	padding: 0;
+	// 	margin: 0;
+	// 	list-style: none;
+	// 	position: relative;
+		
+	// 	> li{
+	// 		padding:0;
+	// 		width: 300px;
+	// 		width: 100%;
+	// 		&:hover a{
+	// 			color: #fff;
+	// 			background: #6d7f28;
+	// 		}
+	// 		> a{
+	// 			font-size: 18px;
+	// 			line-height: 19px;
+	// 			display: block;
+	// 			color: #868686;
+	// 			padding: 10px;
+	// 			&:hover{
+	// 				text-decoration: none;
+	// 				color: #fff;
+	// 				background: #6d7f28;
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 .nav-bar-mob{
 	display: none;
@@ -362,6 +355,10 @@ header{
 		padding-top: 5px;
 		li{
 			border: 0 !important;
+			a:hover,a:active{
+				background: #6f8029;
+				color: #fff;
+			}
 		}
 	}
 	.nav-bar > ul > li.active > a:after, 

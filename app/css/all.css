@@ -121,6 +121,7 @@ article, aside, audio, canvas, datalist, details, figcaption, figure, footer, he
   display: block;
   text-transform: uppercase;
   padding-bottom: 10px;
+  letter-spacing: 1px;
 }
 
 .center-info a {
@@ -341,71 +342,29 @@ header .info-etc strong em {
   -webkit-box-shadow: 0 9px 12px 0px rgba(0, 0, 0, 0.6);
           box-shadow: 0 9px 12px 0px rgba(0, 0, 0, 0.6);
   border-bottom: 4px solid #6f8029;
-}
-
-.drop .drop-sub {
-  width: -webkit-calc(100% - 300px);
-  width: calc(100% - 300px);
-  position: absolute;
-  top: 0;
-  left: 300px;
-  background: #fff;
   padding: 15px 30px;
-  min-height: 100%;
-  border-bottom: 4px solid #6f8029;
 }
 
-.drop .drop-sub h3 {
+.drop h3 {
   margin: 0;
   font-size: 25px;
   line-height: 1;
   padding-bottom: 10px;
 }
 
-.drop .drop-sub h4 {
+.drop h4 {
   margin: 5px 0 0 0;
   font-weight: normal;
   font-size: 15px;
   line-height: 1;
 }
 
-.drop .drop-sub img {
+.drop img {
   max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
   border-bottom: 3px solid #6f8029;
-}
-
-.drop > ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  position: relative;
-}
-
-.drop > ul > li {
-  padding: 0;
-  width: 300px;
-  width: 100%;
-}
-
-.drop > ul > li:hover a {
-  color: #fff;
-  background: #6d7f28;
-}
-
-.drop > ul > li > a {
-  font-size: 18px;
-  line-height: 19px;
-  display: block;
-  color: #868686;
-  padding: 10px;
-}
-
-.drop > ul > li > a:hover {
-  text-decoration: none;
-  color: #fff;
-  background: #6d7f28;
 }
 
 .nav-bar-mob {
@@ -537,6 +496,10 @@ header .info-etc strong em {
   }
   .nav-bar > ul li {
     border: 0 !important;
+  }
+  .nav-bar > ul li a:hover, .nav-bar > ul li a:active {
+    background: #6f8029;
+    color: #fff;
   }
   .nav-bar > ul > li.active > a:after,
   .nav-bar > ul > li > a:hover:after,
