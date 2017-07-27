@@ -36,5 +36,6 @@
     "imagemin-pngquant": "^5.0.1",
     "merge-stream": "^1.0.1",
     "vinyl-buffer": "^1.0.0"
-  }
+  },
+  "dependencies": {}
 }
