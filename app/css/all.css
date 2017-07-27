@@ -134,14 +134,11 @@ article, aside, audio, canvas, datalist, details, figcaption, figure, footer, he
   text-decoration: none;
 }
 
-header {
-  border-bottom: 4px solid #8d8d8d;
-  position: relative;
-  padding-top: 50px;
-}
-
 @media screen and (min-width: 1001px) {
-  header.sticky {
+  #wrapper.sticky-header {
+    padding-top: 240px;
+  }
+  #wrapper.sticky-header header {
     background: #fff;
     position: fixed;
     top: 0;
@@ -149,34 +146,45 @@ header {
     width: 100%;
     z-index: 50;
     padding-top: 20px;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
   }
-  header.sticky .h-links, header.sticky .center-info h2 span, header.sticky .info-etc span {
+  #wrapper.sticky-header header .nav-bar {
+    padding-bottom: 0;
+    margin-top: 0 !important;
+  }
+  #wrapper.sticky-header header .h-links, #wrapper.sticky-header header .center-info h2 span, #wrapper.sticky-header header .info-etc span {
     display: none;
   }
-  header.sticky .center-info h2 {
+  #wrapper.sticky-header header .center-info h2 {
     color: #6d7f28;
   }
-  header.sticky .center-info h2, header.sticky .info-etc strong {
+  #wrapper.sticky-header header .center-info h2, #wrapper.sticky-header header .info-etc strong {
     font-family: 'pf_dindisplay_proregular';
   }
-  header.sticky .info-etc {
+  #wrapper.sticky-header header .info-etc {
     top: auto;
     bottom: 18px;
     color: #525251;
   }
-  header.sticky .info-etc a, header.sticky .info-etc em {
+  #wrapper.sticky-header header .info-etc a, #wrapper.sticky-header header .info-etc em {
     color: #525251;
   }
-  header.sticky .logo {
+  #wrapper.sticky-header header .logo {
     width: 198px;
     height: 26px;
   }
-  header.sticky .logo a {
+  #wrapper.sticky-header header .logo a {
     background: url(../images/logo2.gif) no-repeat;
   }
+}
+
+header {
+  border-bottom: 4px solid #8d8d8d;
+  position: relative;
+  padding-top: 50px;
+  background: #fff;
 }
 
 header .center {
@@ -328,7 +336,6 @@ header .info-etc strong em {
   left: 0;
   width: 100%;
   background: #fff;
-  min-height: 288px;
   display: none;
   visibility: hidden;
   background: #ebebeb;
@@ -379,24 +386,27 @@ header .info-etc strong em {
 }
 
 .drop > ul > li {
-  padding: 5px 10px;
+  padding: 0;
   width: 300px;
 }
 
 .drop > ul > li:hover a {
-  color: #6f8029;
+  color: #fff;
+  background: #6d7f28;
 }
 
-.drop > ul > li a {
+.drop > ul > li > a {
   font-size: 18px;
   line-height: 19px;
   display: block;
   color: #868686;
+  padding: 10px;
 }
 
-.drop > ul > li a:hover {
+.drop > ul > li > a:hover {
   text-decoration: none;
-  color: #6f8029;
+  color: #fff;
+  background: #6d7f28;
 }
 
 .nav-bar-mob {
@@ -404,6 +414,7 @@ header .info-etc strong em {
   width: 50px;
   height: 37px;
   cursor: pointer;
+  position: relative;
   float: right;
 }
 
@@ -412,10 +423,84 @@ header .info-etc strong em {
   display: block;
   height: 4px;
   background: #6f8029;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  -webkit-transition: background 0 0.3s;
+  -o-transition: background 0 0.3s;
+  transition: background 0 0.3s;
 }
 
-.nav-bar-mob span + span {
-  margin-top: 11px;
+.nav-bar-mob span:after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -17px;
+  left: 0;
+  background: #6f8029;
+  -webkit-transition-property: bottom, -webkit-transform;
+  transition-property: bottom, -webkit-transform;
+  -o-transition-property: bottom, transform;
+  transition-property: bottom, transform;
+  transition-property: bottom, transform, -webkit-transform;
+  -webkit-transition-delay: 0.3s, 0;
+       -o-transition-delay: 0.3s, 0;
+          transition-delay: 0.3s, 0;
+  -webkit-transition-duration: 0.3s, 0.3s;
+       -o-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+}
+
+.nav-bar-mob span:before {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: -17px;
+  left: 0;
+  background: #6f8029;
+  -webkit-transition-property: top, -webkit-transform;
+  transition-property: top, -webkit-transform;
+  -o-transition-property: top, transform;
+  transition-property: top, transform;
+  transition-property: top, transform, -webkit-transform;
+  -webkit-transition-delay: 0.3s, 0;
+       -o-transition-delay: 0.3s, 0;
+          transition-delay: 0.3s, 0;
+  -webkit-transition-duration: 0.3s, 0.3s;
+       -o-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+}
+
+.nav-bar-mob.active {
+  opacity: 1;
+}
+
+.nav-bar-mob.active span {
+  background: none;
+}
+
+.nav-bar-mob.active span:before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition-delay: 0, 0.3s;
+       -o-transition-delay: 0, 0.3s;
+          transition-delay: 0, 0.3s;
+}
+
+.nav-bar-mob.active span:after {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition-delay: 0, 0.3s;
+       -o-transition-delay: 0, 0.3s;
+          transition-delay: 0, 0.3s;
 }
 
 @media screen and (min-width: 1001px) {
@@ -488,6 +573,9 @@ header .info-etc strong em {
 @media screen and (max-width: 720px) {
   .center-info, #header .info-etc span {
     display: none;
+  }
+  .nav-bar {
+    margin-top: 0 !important;
   }
 }
 
