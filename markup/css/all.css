@@ -336,7 +336,6 @@ header .info-etc strong em {
   left: 0;
   width: 100%;
   background: #fff;
-  display: none;
   visibility: hidden;
   background: #ebebeb;
   -webkit-box-shadow: 0 9px 12px 0px rgba(0, 0, 0, 0.6);
